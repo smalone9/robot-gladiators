@@ -1,8 +1,5 @@
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
-console.log(
-    enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
-  );
 var playerAttack = 10;
 var playerMoney = 10;
 
@@ -20,7 +17,7 @@ var fight = function() {
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
   
     // if player choses to fight, then fight
-if (promptFight === "fight" || promptFight === "FIGHT") {
+    if (promptFight === "fight" || promptFight === "FIGHT") {
     // remove enemy's health by subtracting the amount set in the playerAttack variable
     enemyHealth = enemyHealth - playerAttack;
     console.log(
@@ -61,6 +58,9 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     else {
       fight();
     }
+   // if player did not chose 1 or 2 in prompt
+    } else {
+    window.alert("You need to pick a valid option. Try again!");
   }
   };
 
